@@ -31,15 +31,15 @@ pl3<-pl2+geom_text(aes(label=Country),color="gray20",check_overlap = TRUE)
 pl2
 pl3
 pointsToLabel <- c("Russia", "Venezuela", "Iraq", "Myanmar", "Sudan",
-"Afghanistan", "Congo", "Greece", "Argentina", "Brazil",
-"India", "Italy", "China", "South Africa", "Spane",
-"Botswana", "Cape Verde", "Bhutan", "Rwanda", "France",
-"United States", "Germany", "Britain", "Barbados", "Norway", "Japan",
-"New Zealand", "Singapore")
+                   "Afghanistan", "Congo", "Greece", "Argentina", "Brazil",
+                   "India", "Italy", "China", "South Africa", "Spane",
+                   "Botswana", "Cape Verde", "Bhutan", "Rwanda", "France",
+                   "United States", "Germany", "Britain", "Barbados", "Norway", "Japan",
+                   "New Zealand", "Singapore")
 pl3<-pl2+geom_text(aes(label=Country),color="gray20",data=subset(df,country %in% poinToLabel),check_overlap = TRUE)
 pl3<-pl2+geom_text(aes(label=Country),color="gray20",data=subset(df,country %in% pointsToLabel),check_overlap = TRUE)
 pl3 <- pl2 + geom_text(aes(label = Country), color = "gray20",
-data = subset(df, Country %in% pointsToLabel),check_overlap = TRUE)
+                       data = subset(df, Country %in% pointsToLabel),check_overlap = TRUE)
 pl3
 pl4<-pl3+scale_x_continuous(limits = c(.9,10.5),breaks = 1:10)
 pl4
